@@ -14,11 +14,11 @@ public class TransferPage {
     private final SelenideElement cancelButton = $("[data-test-id='action-cancel']");
 
     public DashboardPage transferFromTo(int amount, DataHelper.CardInfo fromCard) {
-        // сумма: приложение форматирует "1000" -> "1 000", поэтому НЕ проверяем точное value
+        // сумма: приложение форматирует "1000" -> "1 000"
         amountInput.shouldBe(visible).setValue(String.valueOf(amount)).pressTab();
         amountInput.shouldNotBe(empty);
 
-        // карта списания: чаще всего поле ожидает номер с пробелами
+        // карта списания
         fromInput.shouldBe(visible).setValue(fromCard.getNumber()).pressTab();
         fromInput.shouldNotBe(empty);
 

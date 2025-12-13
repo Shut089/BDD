@@ -1,3 +1,4 @@
+
 package ru.netology.page;
 
 import com.codeborne.selenide.ElementsCollection;
@@ -34,7 +35,7 @@ public class DashboardPage {
     }
 
     private SelenideElement findCard(DataHelper.CardInfo card) {
-        // ищем по последним 4 цифрам — так обычно сделано в шаблоне
+        // ищем по последним 4 цифрам
         var last4 = card.getNumber().replaceAll("\\s", "");
         last4 = last4.substring(last4.length() - 4);
         return cards.findBy(com.codeborne.selenide.Condition.text(last4));

@@ -24,7 +24,4 @@ public class LoginPage {
         return new VerificationPage();
     }
 
-    public void shouldShowError() {
-        errorNotification.shouldBe(visible);
-    }
 }
