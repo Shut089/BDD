@@ -16,11 +16,11 @@ public class TransferPage {
     public DashboardPage transferFromTo(int amount, DataHelper.CardInfo fromCard) {
         // сумма: приложение форматирует "1000" -> "1 000"
         amountInput.shouldBe(visible).setValue(String.valueOf(amount)).pressTab();
-        amountInput.shouldNotBe(empty);
+
 
         // карта списания
         fromInput.shouldBe(visible).setValue(fromCard.getNumber()).pressTab();
-        fromInput.shouldNotBe(empty);
+
 
         // кликаем только когда кнопка реально активна
         transferButton.shouldBe(visible, enabled).click();

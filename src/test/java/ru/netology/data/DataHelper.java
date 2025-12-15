@@ -18,7 +18,6 @@ public class DataHelper {
 
     @Value
     public static class CardInfo {
-        String id;      // например "1" и "2"
         String number;  // "5559 0000 0000 0001"
     }
 
@@ -31,11 +30,11 @@ public class DataHelper {
     }
 
     public static CardInfo getFirstCard() {
-        return new CardInfo("1", "5559 0000 0000 0001");
+        return new CardInfo( "5559 0000 0000 0001");
     }
 
     public static CardInfo getSecondCard() {
-        return new CardInfo("2", "5559 0000 0000 0002");
+        return new CardInfo( "5559 0000 0000 0002");
     }
 
 

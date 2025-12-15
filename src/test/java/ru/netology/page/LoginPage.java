@@ -11,7 +11,7 @@ public class LoginPage {
     private final SelenideElement loginInput = $("[data-test-id='login'] input.input__control");
     private final SelenideElement passwordInput = $("[data-test-id='password'] input.input__control");
     private final SelenideElement loginButton = $("[data-test-id='action-login']");
-    private final SelenideElement errorNotification = $("[data-test-id='error-notification']");
+
 
     public VerificationPage validLogin(DataHelper.AuthInfo info) {
         loginInput.shouldBe(visible).setValue(info.getLogin());
